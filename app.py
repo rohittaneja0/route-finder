@@ -20,4 +20,4 @@ api.add_resource(RouteFinder, '/routefinder/<site>')
 db.init_app(app)
 
 if "__main__" == __name__:
-   uvicorn.run("api:app", port=8080, log_level=info)
+   uvicorn.run("app:app", port=8080, log_level=info)
