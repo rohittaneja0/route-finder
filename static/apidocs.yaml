@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Route Finder API's
+  description: This documentation describes the route finder functionality
+paths:
+  /api/routefinder:
+    get:
+      summary: return the best route
+      parameters:
+        - in: path
+          name: site
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json: {}
+        '400':
+          description: Bad Request - username not passed in the body request
+          content:
+            application/json: {}
+        '404':
+          description: Not Found - user not found
+          content:
+            application/json: {}
