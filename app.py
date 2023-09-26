@@ -19,4 +19,7 @@ api.add_resource(RouteFinder, '/routefinder/<site>')
 db.init_app(app)
 
 if "__main__" == __name__:
-    app.run(port=8080, debug=True)
+    port = os.environ.get('FLASK_PORT') or 8080
+    port = int(port)
+
+    app.run(port=port,host='0.0.0.0')
