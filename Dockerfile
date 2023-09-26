@@ -6,4 +6,4 @@ RUN pip install -r /code/requirements.txt
 COPY . /code/api
 WORKDIR /code/api
 EXPOSE 8080/tcp
-CMD [ "python", "./app.py" ]
+ENTRYPOINT [ "uvicorn", "--host", "0.0.0.0", "--port", "8080", "--reload", "api:app" ]
