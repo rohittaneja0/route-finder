@@ -2,6 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from flasgger import Swagger
 from db import db
+import os
 from resources.route_finder import RouteFinder
 
 # add azure auth
