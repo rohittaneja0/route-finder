@@ -1,4 +1,4 @@
-FROM python:3.9.0-alpine
+FROM ubi8/python-39
 WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 RUN python3 -m pip install --upgrade pip setuptools wheel
