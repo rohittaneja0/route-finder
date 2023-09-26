@@ -6,4 +6,4 @@ RUN pip install -r /code/requirements.txt
 COPY . /code/api
 WORKDIR /code/api
 EXPOSE 8080/tcp
-CMD ["flask", "run"]
+CMD [ "python", "./app.py" ]
